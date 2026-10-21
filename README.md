@@ -19,6 +19,8 @@ npm -v
 
 Klaseko urrats bakoitzak bere adarra du, eta adar bakoitzak aurrekoaren edukia du gehi urrats berria. `main` adarra abiapuntua da: proba-fitxategiak bakarrik ditu.
 
+Adarrak klaseak aurrera egin ahala argitaratzen dira: hemen agertzen ez bada, oraindik ez da iritsi. Erronken ebazpenak hurrengo adarrean argitaratzen dira, saiatu aurretik zuk zeuk!
+
 | Adarra | Edukia | Diapositibak |
 |---|---|---|
 | `main` | Abiapuntua: `datuak.txt`, `a.txt`, `b.txt` | — |
@@ -32,13 +34,25 @@ Klaseko urrats bakoitzak bere adarra du, eta adar bakoitzak aurrekoaren edukia d
 | `08-ariketa-ebazpena` | `inbentarioa.js` osatuta | 61 |
 | `09-http-bideak` | `zerbitzaria-bideak.js`: bi bide `http` moduluarekin soilik | 62–65 |
 
-Adar batera aldatzeko:
+## Nola jarraitu klasea
+
+Egin zure lana zure adar propioan, irakaslearen adarrak ukitu gabe:
 
 ```bash
-git switch 03-moduluak
+git switch -c nire-lana          # behin bakarrik: zure adarra sortu
 ```
 
-Aldaketa propioak badituzu eta adarrez aldatu nahi baduzu, egin commit bat lehenago edo gorde `git stash` bidez.
+Irakaslearen urrats berri bat ikusteko:
+
+```bash
+git add -A
+git commit -m "Nire lana"        # 1. gorde zure lana
+git fetch origin                 # 2. argitaratutako adar berriak jaso
+git switch 03-moduluak           # 3. irakaslearen bertsioa ikusi
+git switch nire-lana             # 4. zure lanera itzuli
+```
+
+Codespacesen ezin duzu biltegi honetara push egin (irakaslearena da). Zure lana GitHuben gorde nahi baduzu, `git push` egitean Codespacesek fork bat sortzea proposatuko dizu.
 
 ## Komandoak urratsez urrats
 
