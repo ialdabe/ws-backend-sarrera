@@ -1,0 +1,10 @@
+{
+  "name": "Web Sistemak · Node.js",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+  "forwardPorts": [8000, 3000, 3500],
+  "portsAttributes": {
+    "8000": { "label": "Node zerbitzaria (http)" },
+    "3000": { "label": "serve (npm start)" },
+    "3500": { "label": "serve (npm run dev)" }
+  }
+}
